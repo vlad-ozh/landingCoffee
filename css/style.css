@@ -37,7 +37,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 120vh;
+  height: 120vh;
+  min-height: 970px;
 }
 
 .header__top {
