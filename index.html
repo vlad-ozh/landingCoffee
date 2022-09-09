@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Cafe Street</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
@@ -45,8 +45,8 @@
             <button class="menu__search-btn">
               <img src="images/search.svg" alt="">
             </button>
-            <button class="cart__btn">
-              <img class="cart__img" src="images/cart.svg" alt="">
+            <button class="menu__cart-btn">
+              <img class="menu__cart-img" src="images/cart.svg" alt="">
             </button>
           </div>
         </div>
@@ -63,7 +63,7 @@
               <div class="header__content-box">
                 <a class="header__content-btn" href="#">
                   Order now
-                  <img class="cart__img" src="images/small-cart.png" alt="">
+                  <img class="header__content-btn-img" src="images/small-cart.png" alt="">
                 </a>
                 <a class="header__content-link" href="#">
                   More menu
@@ -109,10 +109,17 @@
               </div>
       
               <div class="popular__item-buy">
-                <div class="popular__item-temp">
-                  <button class="popular__item-temp-btn">Hot</button>
-                  <button class="popular__item-temp-btn">Cold</button>
-                </div>
+                <form class="popular__item-temp">
+                  <label class="popular__item-temp-label">
+                    <input type="radio" value="hot" checked name="radio" />
+                    Hot
+                  </label>
+                  
+                  <label class="popular__item-temp-label">
+                    <input type="radio" value="cold" name="radio" />
+                    Cold
+                  </label>
+                </form>
                 <button class="popular__item-buy-btn">
                   <img src="images/large-cart.png" alt="">
                 </button>
@@ -137,8 +144,15 @@
       
               <div class="popular__item-buy">
                 <div class="popular__item-temp">
-                  <button class="popular__item-temp-btn">Hot</button>
-                  <button class="popular__item-temp-btn">Cold</button>
+                  <label class="popular__item-temp-label">
+                    <input type="radio" value="hot" checked name="radio" />
+                    Hot
+                  </label>
+                  
+                  <label class="popular__item-temp-label">
+                    <input type="radio" value="cold" name="radio" />
+                    Cold
+                  </label>
                 </div>
                 <button class="popular__item-buy-btn">
                   <img src="images/large-cart.png" alt="">
@@ -164,8 +178,17 @@
       
               <div class="popular__item-buy">
                 <div class="popular__item-temp">
-                  <button class="popular__item-temp-btn">Hot</button>
-                  <button class="popular__item-temp-btn">Cold</button>
+                  <div class="popular__item-temp">
+                    <label class="popular__item-temp-label">
+                      <input type="radio" value="hot" checked name="radio" />
+                      Hot
+                    </label>
+                    
+                    <label class="popular__item-temp-label">
+                      <input type="radio" value="cold" name="radio" />
+                      Cold
+                    </label>
+                  </div>
                 </div>
                 <button class="popular__item-buy-btn">
                   <img src="images/large-cart.png" alt="">
@@ -219,8 +242,8 @@
       <section class="about">
         <div class="container">
           <div class="about__inner">
-            <div class="about__img">
-              <img class="about-img" src="images/about-img.png" alt="">
+            <div class="about__image">
+              <img class="about__img" src="images/about-img.png" alt="">
             </div>
             <div class="about__content">
               <h1 class="about__title">About <span>us</span></h1>
