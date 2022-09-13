@@ -885,7 +885,7 @@ input[type=radio]:checked + .popular__label {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 85px;
 }
 @media screen and (max-width: 1115px) {
   .comments__box {
