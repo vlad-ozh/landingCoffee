@@ -1,30 +1,30 @@
 $(function(){
-    $('.popular__items').slick({
-      dots: false,
-      arrows: false,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1050,
-          settings: {
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
-            centerMode: true,
-            centerPadding: '140px',
-          },
+  $('.popular__items').slick({
+    dots: false,
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1050,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          centerMode: true,
+          centerPadding: '140px',
         },
-        {
-          breakpoint: 901,
-          settings: {
-            infinite: true,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            arrows: false,
-            dots: true,
+      },
+      {
+        breakpoint: 901,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
             centerMode: true,
             centerPadding: '100px',
           },
@@ -74,5 +74,6 @@ $(function(){
   $('.menu__search-btn').on('click', () => {
     $('.menu__input').toggleClass('menu__input--active');
   });
-  
+
+  AOS.init({});
 });
