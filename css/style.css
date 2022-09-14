@@ -10,7 +10,6 @@
 [class^=icon-], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -609,14 +608,15 @@ body {
 }
 .menu__cart-btn {
   margin-left: 24px;
+  position: relative;
   margin-top: 4px;
   border: none;
   background-color: transparent;
 }
 .menu__cart-btn span {
   position: absolute;
-  top: 43px;
-  right: 13px;
+  top: 1px;
+  right: -3px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -625,7 +625,7 @@ body {
 }
 @media screen and (max-width: 910px) {
   .menu__cart-btn span {
-    top: 18px;
+    top: 3px;
   }
 }
 @media screen and (max-width: 630px) {
