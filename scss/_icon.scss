@@ -71,11 +71,13 @@
 .icon-star:before {
   content: "\e901";
   color: #ffd057;
-  vertical-align: middle;
+  position: relative;
+  top: 6px;
 }
 .icon-small-star:before {
   content: "\2b50";
   color: #ffd057;
-  vertical-align: middle;
+  position: relative;
+  top: 3px;
   margin-left: 4px;
 }
