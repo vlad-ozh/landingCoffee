@@ -1,3 +1,5 @@
+@use '_icon.scss';
+
 $basic-color: #FF902B;
 
 *,
@@ -437,6 +439,21 @@ body {
     margin-top: 4px;
     border: none;
     background-color: transparent;
+
+    & span {
+      position: absolute;
+      top: 43px;
+      right: 13px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #FF912B;
+      border: 1px solid #FFFFFF;
+
+      @media screen and (max-width: 910px) {
+        top: 18px;
+      }
+    }
 
     @media screen and (max-width: 630px) {
       margin-left: 15px;
