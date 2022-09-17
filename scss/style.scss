@@ -64,10 +64,21 @@ button {
   align-items: center;
 }
 %item-buy-btn {
-  display: flex;
-  background-color: transparent;
+  background-color: #ff902b;
+  border-radius: 50%;
   border: none;
   cursor: pointer;
+  padding: 12px 12.5px 11.5px;
+  color: #fff;
+  
+  &:hover {
+    background-color: #e37f22;
+  }
+  .cart-img {
+    &:before {
+      font-size: 18px;
+    }
+  }
 }
 
 %slick-current {
@@ -226,6 +237,13 @@ body {
   }
   &__content-btn-img {
     margin-left: 6px;
+    padding: 4px 5px;
+    background-color: #FF902B;
+    border-radius: 50%;
+
+    &:before {
+      font-size: 12px;
+    }
   }
   &__content-link {
     color: #F4AE26;
@@ -444,6 +462,14 @@ body {
     margin-top: 4px;
     border: none;
     background-color: transparent;
+    cursor: pointer;
+
+    &:hover {
+      color: #7E7D7A;
+    }
+    @media screen and (max-width: 630px) {
+      margin-left: 15px;
+    }
 
     & span {
       position: absolute;
@@ -458,10 +484,6 @@ body {
       @media screen and (max-width: 910px) {
         top: 3px;
       }
-    }
-
-    @media screen and (max-width: 630px) {
-      margin-left: 15px;
     }
   }
 }
