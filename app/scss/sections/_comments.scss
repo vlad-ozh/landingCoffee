@@ -1,0 +1,104 @@
+.comments {
+  background-image: url('../../images/bg-coments.png');
+  background-repeat: no-repeat;
+  background-position: left;
+  height: 490px;
+  overflow: hidden;
+  margin-bottom: 120px;
+
+  @media screen and (max-width: 800px) {
+    margin-bottom: 100px;
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 85px;
+
+    @media screen and (max-width: 1115px) {
+      justify-content: space-around;
+    }
+    @media screen and (max-width: 800px) {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+    }
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 16px;
+
+    @media screen and (max-width: 800px) {
+      font-weight: 600;
+      font-size: 26px;
+      line-height: 44px;
+    }
+  }
+  &__text {
+    width: 352px;
+
+    @media screen and (max-width: 800px) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+  &__items {
+    width: 850px;
+    margin-right: -190px;
+
+    & .slick-dots {
+      @extend %slick-dots;
+    }
+    & .slick-dots button {
+      @extend %slick-dots-btn;
+    }
+
+    @media screen and (max-width: 1115px) {
+      width: 290px;
+      margin-right: 0;
+    }
+    @media screen and (max-width: 800px) {
+      &.slick-slider {
+        margin: 0 auto;
+      }
+    }
+  }
+  &__item {
+    position: relative;
+    margin-left: 5px;
+
+    & .slick-current {
+      @extend %slick-current;
+    }
+  }
+  &__item-info {
+    position: absolute;
+    background-color: #FFCB7C;
+    border: 6px solid rgba(255, 211, 144, .5);
+    background-clip: padding-box;
+    border-radius: 15px;
+    padding: 8px 12px;
+    bottom: 20px;
+    left: 25px;
+  }
+  &__item-name {
+    font-weight: 500;
+    color: #2F2105;
+  }
+  &__item-text {
+    font-size: 14px;
+    line-height: 21px;
+    color: #2F2105;
+    width: 205px;
+  }
+  &__item-img {
+    border: 6px solid rgba(255, 211, 144, .5);
+    border-radius: 5px;
+    width: 204px;
+    height: 280px;
+  }
+}

@@ -1,0 +1,76 @@
+.footer {
+  &__inner {
+    background-image: url('../../images/bg-footer.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 392px;
+    margin-bottom: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+    @media screen and (max-width: 800px) {
+      margin-bottom: 100px;
+    }
+  }
+  &__box {
+    text-align: center;
+    padding: 0 15px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #FFF;
+    margin-bottom: 26px;
+
+    @media screen and (max-width: 710px) {
+      font-size: 28px;
+      line-height: 44px;
+    }
+  }
+  &__input {
+    width: 485px;
+    border-radius: 45px;
+    background-color: #fff;
+    border: none;
+    padding: 18px 150px 18px 16px;
+    outline: none;
+
+    @media screen and (max-width: 710px) {
+      width: 350px;
+      padding-right: 130px;
+    }
+    @media screen and (max-width: 450px) {
+      width: 260px;
+      padding-right: 130px;
+    }
+  }
+  &__input-btn {
+    border: none;
+    background-color: #2F2105;
+    border-radius: 33px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #FFFFFF;
+    padding: 11.5px 32px;
+    position: absolute;
+    margin-top: 3.5px;
+    margin-left: -138px;
+    transition: all .3s;
+
+    &:hover {
+      background-color: $basic-color;
+      color: #2F2105;
+    }
+
+    @media screen and (max-width: 710px) {
+      padding: 11.5px 20px;
+      margin-left: -115px;
+    }
+  }
+}

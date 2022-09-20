@@ -1,0 +1,138 @@
+.popular {
+  margin-top: -320px;
+
+  @media screen and (max-width: 910px) {
+    padding-top: 40px;
+  }
+
+  &__title {
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #000000;
+    margin-bottom: 10px;
+
+    & span {
+      border-bottom: 4px solid $basic-color;
+    }
+  }
+  &__items {
+    background-image: url('../../images/bg-popular.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    &.slick-slider {
+      margin: 0 -10px;
+      padding: 0 10px;
+
+      @media screen and (max-width: 1050px) {
+        padding: 0 15%;
+      }
+      @media screen and (max-width: 780px) {
+        padding: 0 20%;
+      }
+      @media screen and (max-width: 560px) {
+        padding: 0 12%;
+      }
+      @media screen and (max-width: 450px) {
+        padding: 0 3%;
+      }
+    }
+    & .slick-dots {
+      @extend %slick-dots;
+    }
+    & .slick-dots button {
+      @extend %slick-dots-btn;
+    }
+
+    @media screen and (max-width: 780px) {
+      background-image: none;
+    }
+  }
+  &__item {
+    background-color: #fff;
+    border-radius: 12px;
+    border: 6px solid rgba(255, 255, 255, .5);
+    background-clip: padding-box;
+    position: relative;
+    top: -65px;
+    color: #2F2105;
+    margin: 65px 10px 0;
+    box-shadow: 1px 1px 3px 2px rgb(0, 0, 0, .15);
+    transition: all .3s;
+
+    &:hover {
+      transform: scale(1.02);
+      z-index: 20;
+    }
+    & .slick-current {
+      @extend %slick-current;
+    }
+
+    @media screen and (max-width: 1050px) {
+      top: 0;
+      margin-top: 0;
+    }
+  }
+  &__item-preview-img {
+    @extend %item-preview-img;
+  }
+  &__item-rating {
+    @extend %item-rating;
+  }
+  &__item-rating-img {
+    @extend %item-rating-img;
+  }
+  &__item-img {
+    @extend %item-img;
+  }
+  &__item-info {
+    @extend %item-info;
+  }
+  &__item-title {
+    @extend %item-title;
+  }
+  &__item-price {
+    @extend %item-price;
+  }
+  &__item-buy {
+    @extend %item-buy;
+  }
+  &__item-temp {
+    display: flex;
+  }
+  &__radio-btn {
+    appearance: none;
+    margin: 0;
+  }
+  &__label {
+    background-color: transparent;
+    color: #FFD28F;
+    border: 2px solid #FFD28F;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 4px 0;
+    width: 64px;
+    text-align: center;
+    cursor: pointer;
+    
+    & ~ & {
+      margin-left: 24px;
+    }
+    &:hover {
+      color: #FF912B;
+      border-color: #FF912B;
+    }
+    input[type="radio"]:checked + & {
+      color: #FF912B;
+      border-color: #FF912B;
+    }
+
+  }
+  &__item-buy-btn {
+    @extend %item-buy-btn;
+  }
+}
