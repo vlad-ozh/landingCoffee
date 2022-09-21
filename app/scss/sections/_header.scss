@@ -1,5 +1,5 @@
 .header {
-  background-image: url('../../images/header.png');
+  background-image: url('../images/header.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -134,7 +134,7 @@
     }
   }
   &__content-right {
-    background-image: url(../../images/header-coffee.png);
+    background-image: url(../images/header-coffee.png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 420px;
