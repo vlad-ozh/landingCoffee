@@ -7,6 +7,7 @@ const uglify       = require('gulp-uglify-es').default;
 const autoprefixer = require('gulp-autoprefixer');
 const imagemin     = require('gulp-imagemin');
 const del          = require('del');
+const ghPages      = require('gulp-gh-pages');
 
 const browsersync = () => {
   browserSync.init({
@@ -18,8 +19,8 @@ const browsersync = () => {
 
 const scripts = () => {
   return src([
-    'node_modules/aos/dist/aos.js',
-    'node_modules/jquery/dist/jquery.js',
+    'node_modules/aos/build/aos.js',
+    'node_modules/jquery/build/jquery.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'app/js/main.js'
   ])
@@ -54,11 +55,11 @@ const images = () => {
         ]
       })
     ]))
-    .pipe(dest('dist/images'))
+    .pipe(dest('build/images'))
 }
 
-const cleanDist = () => {
-  return del('dist')
+const cleanBuild = () => {
+  return del('build')
 }
 
 const build = () => {
@@ -68,7 +69,12 @@ const build = () => {
     'app/js/main.min.js',
     'app/*.html'
   ], {base: 'app'})
-    .pipe(dest('dist'))
+    .pipe(dest('build'))
+}
+
+const deploy = () => {
+  return src('./build/**/*')
+    .pipe(ghPages());
 }
 
 const watching = () => {
@@ -82,7 +88,8 @@ exports.watching = watching;
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.images = images;
-exports.cleanDist = cleanDist;
+exports.cleanBuild = cleanBuild;
+exports.deploy = deploy;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanBuild, images, build);
 exports.default = parallel(styles, scripts, browsersync, watching);
