@@ -18,8 +18,8 @@ const browsersync = () => {
 
 const scripts = () => {
   return src([
-    'node_modules/aos/build/aos.js',
-    'node_modules/jquery/build/jquery.js',
+    'node_modules/aos/dist/aos.js',
+    'node_modules/jquery/dist/jquery.js',
     'node_modules/slick-carousel/slick/slick.min.js',
     'app/js/main.js'
   ])
