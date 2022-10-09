@@ -14,30 +14,66 @@
     justify-content: space-between;
 
     @media screen and (max-width: 950px) {
-      position: absolute;
-      left: 25%;
-      right: 25%;
+      position: fixed;
       background-color: #F4AE26;
       display: block;
-      top: -350px;
+      left: -280px;
+      top: 0;
+      bottom: 0;
       transition: all .5s;
-      border-radius: 10px;
+      z-index: 70;
+      max-width: 260px;
+      width: 100%;
+      box-shadow: 2px 2px 6px 1px rgba(0, 0, 0, .5);
 
       &.menu__list--active {
-        top: 80px;
+        left: 0;
       }
+    }
+  }
+  &__blur {
+    display: none;
+
+    @media screen and (max-width: 950px) {      
+      &.menu__blur--active {
+        display: block;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 50;
+        backdrop-filter: blur(4px);
+      }
+    }
+  }
+  &__exit-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0;
+    display: none;
+    
+    @media screen and (max-width: 950px) {
+      display: block;
     }
   }
   &__item {
     & + & {
       margin-left: 32px;
     }
-
+    
     @media screen and (max-width: 950px) {
+      display: flex;
+      justify-content: center;
       & + & {
         margin-left: 0;
       }
     }
+  }
+  &__item-btn {
+    justify-content: flex-end;
   }
   &__link {
     color: #000;
@@ -60,7 +96,7 @@
   &__management {
     display: flex;
   }
-  &__btn {
+  &__open-btn {
     width: 40px;
     border: none;
     background-color: transparent;

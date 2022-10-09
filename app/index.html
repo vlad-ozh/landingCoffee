@@ -25,11 +25,17 @@
     <header class="header">
       <div class="container">
         <div class="header__top">
-          <a href="#" class="logo">
+          <a href="#" class="header__logo">
             <i class="icon-logo"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span></i>
           </a>
           <nav class="menu">
+            <div class="menu__blur"></div>
             <ul class="menu__list">
+              <li class="menu__item menu__item-btn">
+                <button class="menu__exit-btn">
+                  <span class="icon-close-btn"></span>
+                </button>
+              </li>
               <li class="menu__item">
                 <a class="menu__link" href="#about">About us</a>
               </li>
@@ -42,7 +48,7 @@
             </ul>
           </nav>          
           <div class="menu__management">
-            <button class="menu__btn">
+            <button class="menu__open-btn">
               <span></span>
             </button>
             <input class="menu__input" type="text" placeholder="Cappuccino">
